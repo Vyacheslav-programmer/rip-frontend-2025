@@ -14,9 +14,10 @@ React SPA приложение для системы оценки стоимос
 - Fetch API
 
 ## Запуск:
-\\\ash
+~~~
 npm install
 npm run dev
+~~~
 
 ## Страницы приложения:
 1. Главная страница
@@ -25,4 +26,3 @@ npm run dev
 
 ## Бэкенд:
 https://github.com/Vyacheslav-programmer/RIP-Backend_2025
-
