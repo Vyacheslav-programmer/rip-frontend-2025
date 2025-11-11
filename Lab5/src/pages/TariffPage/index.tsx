@@ -55,7 +55,7 @@ const TariffPage = ({selectedTariff, setSelectedTariff, isMock, setIsMock}: Prop
                 <Col md="6">
                     <img
                         alt=""
-                        src={isMock ? mockImage as string : `http://localhost:8000${selectedTariff.image}`}
+                        src={isMock ? mockImage as string : selectedTariff.image}
                         className="w-100"
                     />
                 </Col>

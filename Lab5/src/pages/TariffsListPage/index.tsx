@@ -5,6 +5,7 @@ import {TariffMocks} from "src/modules/mocks.ts";
 import {FormEvent, useEffect} from "react";
 import * as React from "react";
 import "./styles.css"
+import Cart from "components/Cart/Cart.tsx";
 
 type Props = {
     tariffs: T_Tariff[],
@@ -17,11 +18,20 @@ type Props = {
 
 const TariffsListPage = ({tariffs, setTariffs, isMock, setIsMock, tariffName, setTariffName}:Props) => {
 
-    const fetchData = async () => {
+    const fetchTariffsData = async () => {
         try {
             const response = await fetch(`/api/tariffs/?tariff_name=${tariffName.toLowerCase()}`)
             const data = await response.json()
             setTariffs(data)
+            setIsMock(false)
+        } catch {
+            createMocks()
+        }
+    }
+
+    const fetchDraftForecastCloudPriceData = async () => {
+        try {
+            await fetch("/api/forecastCloudPrices/cart/")
             setIsMock(false)
         } catch {
             createMocks()
@@ -38,12 +48,14 @@ const TariffsListPage = ({tariffs, setTariffs, isMock, setIsMock, tariffName, se
         if (isMock) {
             createMocks()
         } else {
-            await fetchData()
+            await fetchTariffsData()
         }
     }
 
     useEffect(() => {
-        void fetchData()
+        void fetchTariffsData()
+        void fetchDraftForecastCloudPriceData()
+        return setTariffs([])
     }, []);
 
     return (
@@ -60,6 +72,9 @@ const TariffsListPage = ({tariffs, setTariffs, isMock, setIsMock, tariffName, se
                             </Col>
                         </Row>
                     </Form>
+                </Col>
+                <Col className="d-flex flex-row justify-content-end" md="6">
+                    <Cart />
                 </Col>
             </Row>
             <Row>

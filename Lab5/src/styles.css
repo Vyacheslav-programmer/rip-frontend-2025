@@ -4,8 +4,8 @@
     --primary-color: #1633FF;
     --primary-color__hover: hsl(from var(--primary-color) h s calc(l - 10));
 
-    --header-bg: #fff;
-    --header-color: #000;
+    --header-bg: var(--primary-color);
+    --header-color: #fff;
 
     --card-bg: #E3E8F4;
     --card-border-color: #ced4da;

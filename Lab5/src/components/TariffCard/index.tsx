@@ -12,7 +12,7 @@ const TariffCard = ({tariff, isMock}: TariffCardProps) => {
     return (
         <Card key={tariff.id} style={{width: '18rem', margin: "0 auto 50px", height: "calc(100% - 50px)" }}>
             <CardImg
-                src={isMock ? mockImage as string : `http://localhost:8000${tariff.image}`}
+                src={isMock ? mockImage as string : tariff.image}
                 style={{"height": "200px"}}
             />
             <CardBody className="d-flex flex-column justify-content-between">
