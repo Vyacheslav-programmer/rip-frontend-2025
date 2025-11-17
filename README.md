@@ -27,7 +27,6 @@
 - Развертывание на GitHub Pages
 
 ## Запуск:
-'''
 # React приложение
 npm install
 npm run dev
@@ -43,5 +42,6 @@ cargo tauri dev
 - Виды нативных приложений (PWA, Tauri)
 - GitHub Pages
 - Адаптивный дизайн
+
 
 
