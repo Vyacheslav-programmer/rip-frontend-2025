@@ -27,7 +27,7 @@
 - Развертывание на GitHub Pages
 
 ## Запуск:
-\\\ash
+'''
 # React приложение
 npm install
 npm run dev
@@ -35,7 +35,7 @@ npm run dev
 # Tauri приложение
 cd src-tauri
 cargo tauri dev
-\\\
+
 
 ## Контрольные вопросы:
 - Flux архитектура
@@ -43,4 +43,5 @@ cargo tauri dev
 - Виды нативных приложений (PWA, Tauri)
 - GitHub Pages
 - Адаптивный дизайн
+
 
