@@ -9,6 +9,7 @@
 ## Ветки проекта:
 
 - **spa-react** - Лабораторная 5: SPA на React
+- **adaptive-pwa-tauri** - Лабораторная 6: Adaptive PWA Tauri
 
 ## Бэкенд репозиторий:
 https://github.com/Vyacheslav-programmer/RIP-Backend_2025
@@ -18,11 +19,14 @@ https://github.com/Vyacheslav-programmer/RIP-Backend_2025
 - Vite
 - React-Bootstrap
 - Fetch API
+- Redux Toolkit
+- Tauri
+- PWA
 
 ## Предметная область:
 Система оценки стоимости облачного хостинга для веб-проектов. 
 Сравнение тарифов облачных провайдеров (AWS, Google Cloud, Azure, Яндекс.Облако, СберОблако, VK Cloud).
 
 ## Структура:
-Лабораторная работа находится в ветке spa-react с файлами в папке проекта.
+Каждая лабораторная работа находится в отдельной ветке с соответствующими файлами.
 
